@@ -1,1 +1,64 @@
+:root {
+  --brown-color: #483a35;
+  --pink-color: #ffd2dc;
+}
 
+/* #ffbfcd */
+
+body {
+  box-sizing: border-box;
+}
+
+.side-bar {
+  background: rgb(54, 22, 10);
+  background: linear-gradient(
+    145deg,
+    rgba(54, 22, 10, 1) 23%,
+    rgba(147, 90, 70, 1) 54%,
+    rgba(70, 31, 30, 1) 94%
+  );
+  /* background-color: #483a35; */
+  width: 4%;
+  height: 100vh;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.bi-person-circle:active {
+  border: none;
+  filter: drop-shadow(1px 1px 1px rgba(60, 39, 39, 0.5));
+  min-width: 80;
+  min-width: 80;
+}
+
+@media (min-width: 1400px) {
+  .col-xxl-1,
+  .col-lg-1,
+  .col-md-1,
+  .col-sm-2 {
+    max-width: 4%;
+  }
+}
+
+#offcanvasExample {
+  background-color: var(--brown-color);
+  color: var(--pink-color);
+}
+
+.offcanvas-header {
+  color: var(--pink-color);
+}
+
+.btn-close {
+  background: #ffd2dc;
+}
+
+.user-picture {
+  border: 3px solid var(--pink-color);
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+}
