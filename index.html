@@ -16,39 +16,11 @@
     <title>Piggy Bank App</title>
   </head>
   <body>
-    <nav class="navbar bg-body-tertiary">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img
-            class="row-1"
-            src="piggy bank.png"
-            alt="logo.png"
-            width="80"
-            height="auto"
-          />
-        </a>
-      </div>
-    </nav>
-
-    <div class="container">
-      <img
-        src="app name.png"
-        class="img-fluid rounded mx-auto d-block"
-        alt="app-name-image"
-        style="max-width: 40%"
-      />
-    </div>
+    <!-- side bar -->
 
     <div
       class="side-bar d-flex justify-content-center col-2 col-sm-2 col-md-1 col-lg-1 col-xl-1 col-xxl-1"
     >
-      <!-- <button
-        class="btn"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasExample"
-        aria-controls="offcanvasExample"
-      > -->
       <svg
         type="button"
         data-bs-toggle="offcanvas"
@@ -67,7 +39,6 @@
           d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
         />
       </svg>
-      <!-- </button> -->
 
       <div
         class="offcanvas offcanvas-start w-auto"
@@ -93,13 +64,14 @@
             aria-label="Close"
           ></button>
         </div>
+        <!-- side-bar components -->
         <div class="offcanvas-body d-flex flex-column justify-content-between">
           <div class="list-group list-group-flush">
             <a
               href="#"
               class="bi bi-house list-group-item list-group-item-action px-0"
             >
-              <span class="fw-semibold text-padding">Main</span>
+              <span class="fw-semibold text-padding">Dashboard</span>
             </a>
 
             <a
@@ -142,6 +114,152 @@
               >
                 <span class="fw-semibold text-padding">Log Out</span>
               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <!-- top navbar with logo -->
+      <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img
+              class="row-1"
+              src="piggy bank.png"
+              alt="logo.png"
+              width="70"
+              height="auto"
+            />
+          </a>
+        </div>
+      </nav>
+
+      <!-- app name -->
+      <div class="container">
+        <img
+          src="app name.png"
+          class="img-fluid rounded mx-auto d-block"
+          alt="app-name-image"
+          style="max-width: 30%"
+        />
+      </div>
+
+      <!-- activities graph -->
+      <div class="card text-center container my-5">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="true" href="#">Daily</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Monthly</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Savings</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Activities</h5>
+          <p class="card-text">Here will be an activity graph</p>
+        </div>
+      </div>
+
+      <!-- daily activities -->
+
+      <div class="daily-activities">
+        <p class="text-center fs-2 fw-semibold">Add an activity</p>
+
+        <!-- daily activity input  -->
+        <div class="activities-input d-flex container my-5">
+          <form class="row g-3 justify-content-center align-items-center w-100">
+            <div class="col-sm-2">
+              <div class="input-group">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="inlineFormInputGroupUsername"
+                  placeholder="$ Amount"
+                />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inlineFormInputGroupUsername"
+                  placeholder="Details"
+                />
+              </div>
+            </div>
+
+            <div class="col-sm-2">
+              <select class="form-select" id="inlineFormSelectPref">
+                <option selected>Activity</option>
+                <option value="1">Withdrawal</option>
+                <option value="2">Income</option>
+              </select>
+            </div>
+
+            <div class="col">
+              <button type="submit" class="btn btn-primary">Add</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals -->
+
+    <div
+      class="modals container my-5 py-5 d-flex flex-row g-2 justify-content-center"
+    >
+      <!-- Daily Activity modal -->
+      <div class="daily-activity col-sm-8 me-5">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Daily Activities</h5>
+            <p class="card-text">
+              Here will be table/ content of money transfers
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- the other modals -->
+      <div class="other-modals col-sm-4 g-1">
+        <div class="col">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Monthly Balance</h5>
+              <p class="card-text">
+                Here will be monthly report of withdrawals, incomes and monthly
+                reoccuring payments
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Budget</h5>
+                <p class="card-text">
+                  Here will be information about budgeted amount
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Savings</h5>
+                <p class="card-text">
+                  Here will be information about saving goal and a progress bar
+                </p>
+              </div>
             </div>
           </div>
         </div>

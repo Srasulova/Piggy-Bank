@@ -10,6 +10,10 @@ body {
   box-sizing: border-box;
 }
 
+.page-content {
+  margin-left: 4%;
+}
+
 .side-bar {
   background: rgba(248, 249, 250, 1);
   border-right: 1px solid rgb(232, 230, 230);
@@ -18,6 +22,7 @@ body {
   z-index: 999;
   position: fixed;
   top: 0;
+  left: 0;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -37,18 +42,11 @@ body {
   }
 }
 
-/* #offcanvasExample {
-  background-color: var(--brown-color);
-  color: var(--pink-color);
-} */
-
-/* .offcanvas-header {
-  color: var(--pink-color);
-} */
-
-/* .btn-close {
-  background: #ffd2dc;
-} */
+@media (min-width: 400px) {
+  .page-content {
+    margin-left: 4%;
+  }
+}
 
 .user-picture {
   border: 2px solid var(--pink-color);
