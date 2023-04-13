@@ -63,3 +63,25 @@ body {
 .user-name {
   color: var(--pink-color) !important;
 }
+
+.btn-primary {
+  background-color: #ee758f !important;
+  border: none !important;
+}
+
+.btn-primary:active {
+  background-color: #954a5b !important;
+  transform: translateY(2px);
+}
+
+.btn-primary:hover {
+  background-color: #db5472 !important;
+}
+
+.table.rounded {
+  border-radius: 10px;
+}
+
+.balance-text {
+  color: var(--pink-color);
+}
