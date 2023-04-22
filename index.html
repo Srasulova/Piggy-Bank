@@ -218,7 +218,10 @@
             </div>
 
             <div class="col">
-              <button type="submit" class="btn btn-primary btn-add-activity">
+              <button
+                type="submit"
+                class="btn btn-primary btn-add-activity col-sm-8"
+              >
                 Add
               </button>
             </div>
@@ -284,9 +287,10 @@
             </table>
 
             <p
-              class="text-uppercase fw-bold text-center mt-4 text-dark-emphasis fs-4"
+              class="text-uppercase fw-bold text-center text-dark-emphasis mt-4 fs-4"
             >
-              Balance:
+              Balance: <span class="balance"></span>
+              <!-- text-dark-emphasis -->
             </p>
           </div>
         </div>
@@ -302,7 +306,9 @@
                 <span class="fs-4"
                   >Your balance for <span class="month">May</span> is:
                 </span>
-                <span class="fw-bold fs-3 balance-text"> $1958</span>
+                <span class="fw-bold fs-3 goal-balance-text amount-spent"
+                  >$2382</span
+                >
               </p>
             </div>
           </div>
@@ -314,7 +320,9 @@
                   <span class="fs-4"
                     >Budgeted amount for <span class="month">May</span> is:
                   </span>
-                  <span class="fw-bold fs-3 balance-text"> $2800</span>
+                  <span class="fw-bold fs-3 goal-balance-text budgeted-amount"
+                    >$2950</span
+                  >
                 </p>
               </div>
             </div>
@@ -326,12 +334,16 @@
                 <h5 class="card-title text-secondary">Savings</h5>
                 <p class="card-text">
                   <span class="fs-3">Goal of the months is: </span>
-                  <span class="fw-bold fs-3 balance-text"> $1000</span>
+                  <span class="fw-bold fs-3 goal-balance-text goal-amount"
+                    >$1000</span
+                  >
                 </p>
 
                 <p class="card-text">
                   <span class="fs-4">You have saved: </span>
-                  <span class="fw-bold fs-3 balance-text"> $842</span>
+                  <span
+                    class="fw-bold fs-3 goal-balance-text saved-amount"
+                  ></span>
                 </p>
                 <div
                   class="progress"
@@ -341,9 +353,7 @@
                   aria-valuemin="0"
                   aria-valuemax="100"
                 >
-                  <div class="progress-bar bg-danger" style="width: 84%">
-                    84%
-                  </div>
+                  <div class="progress-bar bg-danger">84%</div>
                 </div>
               </div>
             </div>
